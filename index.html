@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Distorsión del Mensaje</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <!-- Nueva fuente para texto de graffiti -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        /* CSS para el input y botones HTML */
+        #text-input-container {
+            position: absolute;
+            top: 50%; /* Initial centered position */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centered initially */
+            display: none; /* Hidden by default */
+            z-index: 1000;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            /* ELIMINADO: transition: all 0.05s ease-out; */ 
+        }
+        #text-input-container input {
+            font-family: 'Alfa Slab One', sans-serif; /* Keep main font for input field */
+            font-size: 24px;
+            padding: 10px;
+            border: 2px solid white;
+            background: black;
+            color: white;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        #text-input-container button {
+            font-family: 'Alfa Slab One', sans-serif;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 2px solid white;
+            background: white;
+            color: black;
+            cursor: pointer;
+        }
+        #text-input-container button:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        Paciencia...
+    </div>
+    <div id="canvas-container" style="display: none;"></div>
+    <div id="text-input-container">
+        <input type="text" id="user-text-input" placeholder="Escribe tu mensaje...">
+        <button id="submit-text-button">Enviar</button>
+    </div>
+    <script src="js/sketch.js"></script>
+</body>
+</html>
